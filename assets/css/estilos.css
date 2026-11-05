@@ -1,0 +1,91 @@
+/* We Want More · estilos de la landing
+   Colores tomados de las piezas de la campaña */
+:root{
+  --rojo:#E01B22;
+  --rojo-oscuro:#B8141A;
+  --negro:#141414;
+  --gris:#5E5E5E;
+  --linea:#E4E4E4;
+  --blanco:#FFFFFF;
+}
+
+body{
+  font-family:"Archivo", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  color:var(--negro);
+  background:var(--blanco);
+}
+
+/* Titulares anchos y pesados, como en las piezas */
+.display-claim, .titulo-seccion, .frase-more, .marca, .cierre-manifiesto, .num{
+  font-stretch:125%;
+  font-variation-settings:"wdth" 125;
+}
+
+/* ---------- Navegación ---------- */
+.nav-wm{background:rgba(255,255,255,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--linea);}
+.marca{font-weight:900; letter-spacing:.06em; text-transform:uppercase; font-size:1rem; color:var(--negro);}
+.marca span{color:var(--rojo);}
+.nav-wm .nav-link{color:var(--negro); font-weight:500;}
+.nav-wm .nav-link:hover{color:var(--rojo);}
+
+/* ---------- Botones ---------- */
+.btn-wm{background:var(--rojo); color:var(--blanco); border:0; font-weight:700; border-radius:4px;}
+.btn-wm:hover, .btn-wm:focus{background:var(--rojo-oscuro); color:var(--blanco);}
+
+/* ---------- Tipografía común ---------- */
+.eyebrow{font-size:.78rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gris); margin-bottom:.75rem;}
+.eyebrow-rojo{color:var(--rojo);}
+.eyebrow-claro{color:rgba(255,255,255,.85);}
+.rojo{color:var(--rojo);}
+.titulo-seccion{font-weight:900; text-transform:uppercase; font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.05; margin-bottom:1rem;}
+.texto-grande{font-size:1.2rem; line-height:1.6;}
+
+/* ---------- Hero ---------- */
+.hero{padding:clamp(3rem,8vw,6rem) 0;}
+.display-claim{font-weight:900; text-transform:uppercase; font-size:clamp(2.4rem,6.5vw,4.6rem); line-height:.98; margin:0;}
+.display-claim .ligero{display:block; font-weight:400; font-size:.38em; letter-spacing:.12em; margin-bottom:.4em;}
+.hero .lead{font-size:1.3rem; color:var(--gris); max-width:30ch;}
+.hero-img{border-radius:6px; box-shadow:0 20px 40px rgba(0,0,0,.12);}
+
+/* ---------- Secciones ---------- */
+.seccion{padding:clamp(3.5rem,8vw,6rem) 0;}
+.seccion-negra{background:var(--negro); color:var(--blanco);}
+.seccion-roja{background:var(--rojo); color:var(--blanco);}
+.seccion-roja .eyebrow, .seccion-negra .eyebrow:not(.eyebrow-rojo){color:rgba(255,255,255,.75);}
+
+/* ---------- Manifiesto ---------- */
+.manifiesto{max-width:46rem;}
+.manifiesto p{font-size:clamp(1.15rem,2.2vw,1.5rem); line-height:1.5; margin-bottom:.6rem; color:rgba(255,255,255,.85);}
+.manifiesto .destacado{color:var(--blanco); font-weight:700;}
+.cierre-manifiesto{margin-top:2.5rem; font-weight:900; text-transform:uppercase; font-size:clamp(1.6rem,4vw,2.6rem); line-height:1.1;}
+
+/* ---------- Concepto ---------- */
+.frase-more{font-weight:900; font-size:clamp(1.6rem,5vw,3.4rem); line-height:1.1; margin:1.5rem 0 2rem;}
+.palabra-rotativa{color:var(--rojo); display:inline-block; min-width:5ch; transition:opacity .3s ease;}
+.palabra-rotativa.oculta{opacity:0;}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta{border:1px solid var(--linea); border-radius:6px; padding:1.5rem; height:100%; background:var(--blanco);}
+.tarjeta h3{font-size:1.1rem; font-weight:800; margin-bottom:.5rem;}
+.tarjeta p{margin:0; color:var(--gris);}
+.num{display:block; font-weight:900; color:var(--rojo); font-size:1.4rem; margin-bottom:.5rem;}
+
+/* ---------- Esencia ---------- */
+.foto{border-radius:6px;}
+.lista-impacto{list-style:none; padding:0; margin:2rem 0 0;}
+.lista-impacto li{border-top:1px solid rgba(255,255,255,.35); padding:.9rem 0; font-size:1rem;}
+.lista-impacto span{display:inline-block; min-width:7.5rem; font-weight:900; text-transform:uppercase; letter-spacing:.04em;}
+
+/* ---------- Formulario ---------- */
+.formulario{background:var(--blanco); color:var(--negro); border-radius:6px; padding:clamp(1.25rem,3vw,2rem);}
+.formulario .form-label{font-weight:600;}
+.formulario .form-control:focus, .formulario .form-select:focus{border-color:var(--rojo); box-shadow:0 0 0 .2rem rgba(224,27,34,.2);}
+.aviso{font-weight:600; color:var(--rojo-oscuro); min-height:1.5em; margin-bottom:0;}
+
+/* ---------- Pie ---------- */
+.pie{padding:2.5rem 0; border-top:1px solid var(--linea); color:var(--gris);}
+
+@media (prefers-reduced-motion: reduce){
+  .palabra-rotativa{transition:none;}
+  html{scroll-behavior:auto;}
+}
